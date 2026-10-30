@@ -1,6 +1,4 @@
-# Early Failure Detection and Intervention in Video Diffusion Models
-
-**NeurIPS 2026**
+# Early Failure Detection and Intervention in Video Diffusion Models, NeurIPS 2026
 
 ## BibTeX
 
