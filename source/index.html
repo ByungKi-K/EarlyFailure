@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <title>Early Failure Detection and Intervention in Video Diffusion Models</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261030-16">
+  <link rel="stylesheet" href="styles.css?v=20261030-17">
   <script src="app.js?v=20261030-16" defer></script>
   <script src="decoder-demo.js?v=20261030-1" defer></script>
 </head>
@@ -103,9 +103,10 @@
     </figure>
   </section>
 
-  <section class="content section decoder-section" id="l2r" aria-labelledby="decoder-title">
-    <h2 id="decoder-title">Fast previews with a tiny L2R module</h2>
-    <p class="decoder-intro">Latent-to-RGB (L2R) previews arrive <strong>≈203× faster</strong> than with the original CogVideoX decoder.</p>
+  <section class="section decoder-section" id="l2r" aria-labelledby="decoder-title">
+    <div class="content">
+    <h2 id="decoder-title">L2R enables early failure detection <span>with negligible resource overhead.</span></h2>
+    <p class="decoder-intro">A tiny L2R module delivers previews <strong>≈203× faster</strong> than the original CogVideoX decoder.</p>
     <div class="decoder-stats" aria-label="L2R model size and latency">
       <div><strong>19.7<span> ms</span></strong><span>preview latency</span></div>
       <div><strong>0.059<span>M</span></strong><span>trainable parameters</span></div>
@@ -162,7 +163,7 @@
       <p class="decoder-timing-note">Recorded previews replay the paper’s decoder latencies after loading. This is a timing illustration, not live model inference.</p>
       <noscript><p class="decoder-timing-note">Enable JavaScript to try the timing comparison.</p></noscript>
     </figure>
-    <p class="decoder-takeaway">L2R enables early failure detection <strong>with negligible resource overhead.</strong></p>
+    </div>
   </section>
 
   <section class="content section" id="results" aria-labelledby="results-title">
