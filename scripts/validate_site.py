@@ -41,9 +41,9 @@ for link in page.links:
     elif url.fragment:
         assert url.fragment in page.ids, f"Missing anchor: {link}"
 
-js = (PUBLIC / "app.js").read_text()
-for selector in re.findall(r'querySelector\("#([\w-]+)"\)', js):
-    assert selector in page.ids, f"JavaScript target does not exist: {selector}"
+for script in PUBLIC.glob("*.js"):
+    for selector in re.findall(r'querySelector\("#([\w-]+)"\)', script.read_text()):
+        assert selector in page.ids, f"JavaScript target does not exist: {selector}"
 for slug in ("corgi", "astronaut", "ironman", "panda", "nebula"):
     for side in ("before", "after"):
         for folder, extension in (("videos", "mp4"), ("images", "webp")):
@@ -51,6 +51,10 @@ for slug in ("corgi", "astronaut", "ironman", "panda", "nebula"):
 for step in (1, 3, 5, 7, 10, 12, 14):
     assert (PUBLIC / f"assets/frames/failure-{step:02}.webp").is_file()
     assert (PUBLIC / f"assets/videos/l2r-step-{step:02}.mp4").is_file()
+
+for step in (1, *range(5, 51, 5)):
+    for decoder in ("l2r", "original"):
+        assert (PUBLIC / f"assets/videos/decoder-step-{step:02}-{decoder}.mp4").is_file()
 
 records = json.loads((ROOT / "scripts/asset-provenance.json").read_text())
 recorded = {record["public_file"] for record in records}

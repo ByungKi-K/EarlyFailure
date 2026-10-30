@@ -258,5 +258,115 @@
     "public_file": "source/assets/images/ironman-after.webp",
     "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0745_samples/output.mp4",
     "processing": "Poster frame at 1 second; WebP quality 85; original dimensions preserved."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-01-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/000_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 1 is metadata step_number_one_based; folder index is 0. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-01-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/000_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 1 is metadata step_number_one_based; folder index is 0. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-05-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/004_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 5 is metadata step_number_one_based; folder index is 4. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-05-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/004_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 5 is metadata step_number_one_based; folder index is 4. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-10-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/009_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 10 is metadata step_number_one_based; folder index is 9. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-10-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/009_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 10 is metadata step_number_one_based; folder index is 9. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-15-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/014_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 15 is metadata step_number_one_based; folder index is 14. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-15-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/014_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 15 is metadata step_number_one_based; folder index is 14. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-20-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/019_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 20 is metadata step_number_one_based; folder index is 19. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-20-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/019_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 20 is metadata step_number_one_based; folder index is 19. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-25-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/024_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 25 is metadata step_number_one_based; folder index is 24. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-25-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/024_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 25 is metadata step_number_one_based; folder index is 24. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-30-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/029_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 30 is metadata step_number_one_based; folder index is 29. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-30-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/029_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 30 is metadata step_number_one_based; folder index is 29. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-35-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/034_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 35 is metadata step_number_one_based; folder index is 34. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-35-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/034_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 35 is metadata step_number_one_based; folder index is 34. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-40-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/039_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 40 is metadata step_number_one_based; folder index is 39. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-40-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/039_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 40 is metadata step_number_one_based; folder index is 39. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-45-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/044_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 45 is metadata step_number_one_based; folder index is 44. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-45-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/044_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 45 is metadata step_number_one_based; folder index is 44. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-50-l2r.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/049_denoise_step/l2r_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 13 frames preserved. Display step 50 is metadata step_number_one_based; folder index is 49. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
+  },
+  {
+    "public_file": "source/assets/videos/decoder-step-50-original.mp4",
+    "original_file": "iron_man_flying_in_the_sky/l2r_previews/049_denoise_step/vae_preview.mp4",
+    "processing": "H.264 stream copy with faststart; original 720x480, 8 fps, all 49 frames preserved. Display step 50 is metadata step_number_one_based; folder index is 49. Only the selected pair is loaded for the timing illustration. Reveal delays use paper benchmark latencies (19.7 ms L2R; 3.990 s original), not this export run’s recorded wall-clock times."
   }
 ]

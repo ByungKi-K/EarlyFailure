@@ -10,8 +10,9 @@
   <meta property="og:type" content="website">
   <title>Early Failure Detection and Intervention in Video Diffusion Models</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261030-14">
+  <link rel="stylesheet" href="styles.css?v=20261030-15">
   <script src="app.js?v=20261030-16" defer></script>
+  <script src="decoder-demo.js?v=20261030-1" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -99,6 +100,67 @@
     <p class="research-copy">Waiting for a full video that misses the user's intent wastes both compute and time. We inspect early previews to catch likely failures, diagnose the mismatch, and intervene selectively. A lightweight single-frame probe guides semantic injection; visual feedback refines the prompt when needed. The aim is to reach a satisfactory video sooner, with less wasted generation.</p>
     <figure class="paper-figure teaser-figure">
       <a href="assets/images/teaser-paper.webp" target="_blank" rel="noopener"><img src="assets/images/teaser-paper.webp" alt="Paper Figure 1: real-time inspection detects a failing bird generation from an intermediate preview, then diagnostic intervention corrects it. On CogVideoX-5B, ours improves the VBench final score from 0.778 to 0.800 with 16.55% extra time, compared with 0.793 and 43.73% for regeneration." width="1995" height="581" loading="lazy"></a>
+    </figure>
+  </section>
+
+  <section class="content section decoder-section" id="l2r" aria-labelledby="decoder-title">
+    <h2 id="decoder-title">Fast previews with a tiny L2R module</h2>
+    <p class="decoder-intro">Latent-to-RGB (L2R) previews arrive <strong>≈203× faster</strong> than with the original CogVideoX decoder.</p>
+    <div class="decoder-stats" aria-label="L2R model size and latency">
+      <div><strong>19.7<span> ms</span></strong><span>preview latency</span></div>
+      <div><strong>0.059<span>M</span></strong><span>trainable parameters</span></div>
+      <div><strong>≈0.285<span> MB</span></strong><span>FP32 checkpoint</span></div>
+    </div>
+    <p class="decoder-size-note">58,995 parameters · CogVideoX checkpoint ≈0.285 MB; Wan checkpoint 0.286 MB.</p>
+    <figure class="decoder-demo" id="decoder-demo" data-phase="idle">
+      <figcaption class="decoder-prompt">“Iron Man flying in the sky” <span>CogVideoX-5B</span></figcaption>
+      <div class="decoder-toolbar">
+        <div class="decoder-step-picker" role="group" aria-label="Choose a denoising step to compare decoders">
+          <span>Denoising step</span>
+          <button data-decoder-step="1" aria-pressed="false">1</button>
+          <button data-decoder-step="5" aria-pressed="false">5</button>
+          <button data-decoder-step="10" aria-pressed="true" class="selected">10</button>
+          <button data-decoder-step="15" aria-pressed="false">15</button>
+          <button data-decoder-step="20" aria-pressed="false">20</button>
+          <button data-decoder-step="25" aria-pressed="false">25</button>
+          <button data-decoder-step="30" aria-pressed="false">30</button>
+          <button data-decoder-step="35" aria-pressed="false">35</button>
+          <button data-decoder-step="40" aria-pressed="false">40</button>
+          <button data-decoder-step="45" aria-pressed="false">45</button>
+          <button data-decoder-step="50" aria-pressed="false">50</button>
+        </div>
+        <button class="decoder-replay" id="decoder-replay">Compare step 10 <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="decoder-input">
+        <svg class="latent-illustration" viewBox="0 0 130 100" role="img" aria-labelledby="latent-illustration-title">
+          <title id="latent-illustration-title">Schematic of the shared predicted clean latent tensor</title>
+          <rect x="36" y="8" width="84" height="64" rx="5" fill="#eaf0f7" stroke="#b7c9da"/>
+          <rect x="25" y="18" width="84" height="64" rx="5" fill="#e0e9f3" stroke="#aabfd4"/>
+          <rect x="14" y="28" width="84" height="64" rx="5" fill="#f7f9fc" stroke="#95adc6"/>
+          <rect class="latent-cell" x="21" y="35" width="8" height="8" rx="1" fill="#d9b3b1"/><rect class="latent-cell" x="31" y="35" width="8" height="8" rx="1" fill="#9ab8d7"/><rect class="latent-cell" x="41" y="35" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="51" y="35" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="61" y="35" width="8" height="8" rx="1" fill="#d9b3b1"/><rect class="latent-cell" x="71" y="35" width="8" height="8" rx="1" fill="#9ab8d7"/><rect class="latent-cell" x="81" y="35" width="8" height="8" rx="1" fill="#7599c4"/><rect class="latent-cell" x="21" y="45" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="31" y="45" width="8" height="8" rx="1" fill="#b4cddc"/><rect class="latent-cell" x="41" y="45" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="51" y="45" width="8" height="8" rx="1" fill="#b4cddc"/><rect class="latent-cell" x="61" y="45" width="8" height="8" rx="1" fill="#b9c5df"/><rect class="latent-cell" x="71" y="45" width="8" height="8" rx="1" fill="#e9d7b7"/><rect class="latent-cell" x="81" y="45" width="8" height="8" rx="1" fill="#b4cddc"/><rect class="latent-cell" x="21" y="55" width="8" height="8" rx="1" fill="#7599c4"/><rect class="latent-cell" x="31" y="55" width="8" height="8" rx="1" fill="#9ab8d7"/><rect class="latent-cell" x="41" y="55" width="8" height="8" rx="1" fill="#d9b3b1"/><rect class="latent-cell" x="51" y="55" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="61" y="55" width="8" height="8" rx="1" fill="#b9c5df"/><rect class="latent-cell" x="71" y="55" width="8" height="8" rx="1" fill="#9ab8d7"/><rect class="latent-cell" x="81" y="55" width="8" height="8" rx="1" fill="#7599c4"/><rect class="latent-cell" x="21" y="65" width="8" height="8" rx="1" fill="#e9d7b7"/><rect class="latent-cell" x="31" y="65" width="8" height="8" rx="1" fill="#b9c5df"/><rect class="latent-cell" x="41" y="65" width="8" height="8" rx="1" fill="#9ab8d7"/><rect class="latent-cell" x="51" y="65" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="61" y="65" width="8" height="8" rx="1" fill="#b4cddc"/><rect class="latent-cell" x="71" y="65" width="8" height="8" rx="1" fill="#7599c4"/><rect class="latent-cell" x="81" y="65" width="8" height="8" rx="1" fill="#d9b3b1"/><rect class="latent-cell" x="21" y="75" width="8" height="8" rx="1" fill="#b9c5df"/><rect class="latent-cell" x="31" y="75" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="41" y="75" width="8" height="8" rx="1" fill="#d4bdd8"/><rect class="latent-cell" x="51" y="75" width="8" height="8" rx="1" fill="#b9c5df"/><rect class="latent-cell" x="61" y="75" width="8" height="8" rx="1" fill="#b4cddc"/><rect class="latent-cell" x="71" y="75" width="8" height="8" rx="1" fill="#e9d7b7"/><rect class="latent-cell" x="81" y="75" width="8" height="8" rx="1" fill="#b9c5df"/>
+        </svg>
+        <div><strong>Shared latent</strong><span id="decoder-selected-step">Step 10 / 50</span><small>Schematic</small></div>
+      </div>
+      <svg class="decoder-branches" viewBox="0 0 800 34" preserveAspectRatio="none" aria-hidden="true"><path d="M400 0v12H200v17m-5-5 5 5 5-5M400 12h200v17m-5-5 5 5 5-5"/></svg>
+      <div class="decoder-pair">
+        <div class="decoder-result decoder-result-l2r" id="decoder-l2r-result" data-state="waiting">
+          <div class="decoder-result-heading"><h3>L2R <span>(ours)</span></h3><strong>19.7 ms</strong></div>
+          <div class="decoder-screen">
+            <video id="decoder-l2r-video" aria-hidden="true" muted loop playsinline preload="none" width="720" height="480" aria-label="L2R preview of Iron Man flying in the sky"></video>
+            <div class="decoder-cover" id="decoder-l2r-cover"><span class="decoder-cover-label">Choose a step to decode</span><span class="decoder-clock" hidden>0.000 s</span><span class="decoder-progress" hidden><span></span></span></div>
+          </div>
+        </div>
+        <div class="decoder-result" id="decoder-original-result" data-state="waiting">
+          <div class="decoder-result-heading"><h3>Original decoder</h3><strong>3.990 s</strong></div>
+          <div class="decoder-screen">
+            <video id="decoder-original-video" aria-hidden="true" muted loop playsinline preload="none" width="720" height="480" aria-label="Original CogVideoX decoder preview of Iron Man flying in the sky"></video>
+            <div class="decoder-cover" id="decoder-original-cover"><span class="decoder-cover-label">Choose a step to decode</span><span class="decoder-clock" hidden>0.000 s</span><span class="decoder-progress" hidden><span></span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="decoder-footer"><p id="decoder-status" role="status">Select a step to see the difference in decoding time.</p><button class="play-button" id="decoder-play" hidden>Pause previews</button></div>
+      <p class="decoder-timing-note">Recorded previews replay the paper’s decoder latencies after loading. This is a timing illustration, not live model inference.</p>
+      <noscript><p class="decoder-timing-note">Enable JavaScript to try the timing comparison.</p></noscript>
     </figure>
   </section>
 
