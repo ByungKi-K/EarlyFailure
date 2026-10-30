@@ -1,4 +1,4 @@
-# Early Failure — NeurIPS 2026 project page
+# EarlyFailure — NeurIPS 2026 project page
 
 논문 **Early Failure Detection and Intervention in Video Diffusion Models**의 정적 프로젝트 페이지입니다. HTML, CSS, JavaScript만 사용하며 패키지 설치나 빌드 과정이 필요하지 않습니다.
 
@@ -37,7 +37,11 @@ scripts/
 
 ## GitHub Pages 배포
 
-현재는 로컬 구현이며 GitHub 저장소 생성, 업로드, 공개 배포는 수행하지 않았습니다.
+공개 페이지: [EarlyFailure](https://byungki-k.github.io/EarlyFailure/)
+
+저장소: [ByungKi-K/EarlyFailure](https://github.com/ByungKi-K/EarlyFailure)
+
+`main` 브랜치의 웹사이트 변경 사항은 GitHub Actions를 통해 자동 배포됩니다. 이 로컬 저장소는 `origin/main`을 추적합니다. 아래 절차는 다른 저장소에 새로 배포할 때의 안내입니다.
 
 1. 이 프로젝트를 **독립 Git 저장소**로 만들어 원하는 GitHub 저장소에 올립니다. 상위 폴더의 저장소를 사용하지 마세요. Git에 포함할 항목은 `source/`, `scripts/`, `.github/`, `.gitignore`, `README.md`입니다.
 2. 기본 브랜치를 `main`으로 설정합니다. 다른 이름이면 `.github/workflows/pages.yml`의 `branches`를 수정합니다.
