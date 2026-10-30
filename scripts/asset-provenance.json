@@ -1,0 +1,242 @@
+[
+  {
+    "public_file": "source/assets/videos/corgi-before.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0729_samples/initial.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/corgi-before.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0729_samples/initial.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/videos/corgi-after.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0729_samples/output.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/corgi-after.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0729_samples/output.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/videos/astronaut-before.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0570_samples/initial.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/astronaut-before.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0570_samples/initial.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/videos/astronaut-after.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0570_samples/output.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/astronaut-after.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0570_samples/output.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/videos/panda-before.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0754_samples/initial.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/panda-before.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0754_samples/initial.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/videos/panda-after.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0754_samples/output.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/panda-after.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0754_samples/output.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/videos/nebula-before.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0733_samples/initial.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/nebula-before.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0733_samples/initial.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/videos/nebula-after.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0733_samples/output.mp4",
+    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/nebula-after.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0733_samples/output.mp4",
+    "processing": "Poster frame at 1 second"
+  },
+  {
+    "public_file": "source/assets/documents/paper.pdf",
+    "original_file": "paper.pdf",
+    "processing": "Unmodified copy of the author-named paper"
+  },
+  {
+    "public_file": "source/assets/videos/overview.mp4",
+    "original_file": "NeurIPS26/supple.mp4",
+    "processing": "1080p H.264, CRF 24, faststart; full duration preserved"
+  },
+  {
+    "public_file": "source/assets/images/overview-poster.webp",
+    "original_file": "NeurIPS26/supple.mp4",
+    "processing": "Poster frame at 83 seconds, showing the opening qualitative results; extracted from the published full-length overview.mp4."
+  },
+  {
+    "public_file": "source/assets/images/early-predictability.webp",
+    "original_file": "paper.pdf",
+    "processing": "Figure 7 extracted from paper.pdf page 9, rendered at 4000 px page height; crop in PDF points (107, 297, 505, 435), WebP quality 95. Figure content unchanged."
+  },
+  {
+    "public_file": "source/assets/images/failure-separation.webp",
+    "original_file": "paper.pdf",
+    "processing": "Figure 9, page 10; rendered at 1800 px page height and cropped to the figure without changing chart data"
+  },
+  {
+    "public_file": "source/assets/frames/failure-01.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/01_denoise.mp4",
+    "processing": "Frame at 1 second from the recorded intermediate video; no semantic editing"
+  },
+  {
+    "public_file": "source/assets/frames/failure-03.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/03_denoise.mp4",
+    "processing": "Frame at 1 second from the recorded intermediate video; no semantic editing"
+  },
+  {
+    "public_file": "source/assets/frames/failure-05.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/05_denoise.mp4",
+    "processing": "Frame at 1 second from the recorded intermediate video; no semantic editing"
+  },
+  {
+    "public_file": "source/assets/frames/failure-07.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/07_denoise.mp4",
+    "processing": "Frame at 1 second from the recorded intermediate video; no semantic editing"
+  },
+  {
+    "public_file": "source/assets/frames/failure-10.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/10_denoise.mp4",
+    "processing": "Frame at 1 second from the recorded intermediate video; no semantic editing"
+  },
+  {
+    "public_file": "source/assets/frames/failure-12.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/12_denoise.mp4",
+    "processing": "Frame at 1 second from the recorded intermediate video; no semantic editing"
+  },
+  {
+    "public_file": "source/assets/frames/failure-14.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/14_denoise.mp4",
+    "processing": "Frame at 1 second from the recorded intermediate video; no semantic editing"
+  },
+  {
+    "public_file": "source/assets/images/corgi-recovered.webp",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/output.mp4",
+    "processing": "Final intervened result, frame at 1 second; paired with early previews from the same sample directory"
+  },
+  {
+    "public_file": "source/assets/images/pipeline-paper.webp",
+    "original_file": "paper.pdf",
+    "processing": "Unmodified figure content rendered and cropped: Figure 2, page 3"
+  },
+  {
+    "public_file": "source/assets/images/intervention-cost.webp",
+    "original_file": "paper.pdf",
+    "processing": "Unmodified figure content rendered and cropped: Figure 6, page 9"
+  },
+  {
+    "public_file": "source/assets/images/latency-comparison.svg",
+    "original_file": "paper.pdf",
+    "processing": "Matplotlib plot of Table 5 decoding times (seconds converted to milliseconds) and Section 3.1 inspection times; generator: scripts/render_latency.py"
+  },
+  {
+    "public_file": "source/assets/images/latency-comparison.png",
+    "original_file": "paper.pdf",
+    "processing": "Matplotlib plot of Table 5 decoding times (seconds converted to milliseconds) and Section 3.1 inspection times; generator: scripts/render_latency.py"
+  },
+  {
+    "public_file": "source/assets/images/quality-saturation-wan.webp",
+    "original_file": "paper.pdf",
+    "processing": "Wan2.1 panel of Figure 7, page 9; PDF-point crop (309, 310, 505, 435), rendered at 4000 px page height. Curves unchanged. The image is embedded in an HTML SVG with viewBox 0 55 990 576, omitting only the original title margin. SVG annotations provide the interactive step guide, the y-axis label \"Error vs. final video\", and the model name inside the plot. A note below the legend identifies the normalized error and 1,800-prompt mean. The underlying image is unchanged."
+  },
+  {
+    "public_file": "source/assets/images/teaser-paper.webp",
+    "original_file": "paper.pdf",
+    "processing": "Figure 1, page 1; rendered at 4000 px page height and cropped to PDF points (110, 250, 505, 365), excluding the caption. Figure content unchanged."
+  },
+  {
+    "public_file": "source/assets/images/vbench-detected-failures.webp",
+    "original_file": "paper.pdf",
+    "processing": "Figure 18, page 25; rendered at 4000 px page height and cropped to PDF points (107, 192, 505, 292). CDFs on the predicted-failure subset, no chart data changed."
+  },
+  {
+    "public_file": "source/assets/images/vbench-cogvideox.svg",
+    "original_file": "paper.pdf",
+    "processing": "Matplotlib plot of Table 1 original-prompt baseline and default Ours scores (Final, Quality, Semantic), full VBench evaluation. Shared labelled 0.65-0.85 score axis. Generator: scripts/render_vbench.py."
+  },
+  {
+    "public_file": "source/assets/images/vbench-cogvideox.png",
+    "original_file": "paper.pdf",
+    "processing": "Matplotlib plot of Table 1 original-prompt baseline and default Ours scores (Final, Quality, Semantic), full VBench evaluation. Shared labelled 0.65-0.85 score axis. Generator: scripts/render_vbench.py."
+  },
+  {
+    "public_file": "source/assets/images/vbench-wan.svg",
+    "original_file": "paper.pdf",
+    "processing": "Matplotlib plot of Table 1 original-prompt baseline and default Ours scores (Final, Quality, Semantic), full VBench evaluation. Shared labelled 0.65-0.85 score axis. Generator: scripts/render_vbench.py."
+  },
+  {
+    "public_file": "source/assets/images/vbench-wan.png",
+    "original_file": "paper.pdf",
+    "processing": "Matplotlib plot of Table 1 original-prompt baseline and default Ours scores (Final, Quality, Semantic), full VBench evaluation. Shared labelled 0.65-0.85 score axis. Generator: scripts/render_vbench.py."
+  },
+  {
+    "public_file": "source/assets/videos/overview-qualitative.mp4",
+    "original_file": "NeurIPS26/supple.mp4",
+    "processing": "Qualitative section from 77 seconds to the end; 1080p H.264, CRF 24, no audio, faststart. Generated directly from the research original; full-length overview.mp4 preserved."
+  },
+  {
+    "public_file": "source/assets/videos/l2r-step-01.mp4",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/01_denoise.mp4",
+    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/videos/l2r-step-03.mp4",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/03_denoise.mp4",
+    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/videos/l2r-step-05.mp4",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/05_denoise.mp4",
+    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/videos/l2r-step-07.mp4",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/07_denoise.mp4",
+    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/videos/l2r-step-10.mp4",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/10_denoise.mp4",
+    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/videos/l2r-step-12.mp4",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/12_denoise.mp4",
+    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/videos/l2r-step-14.mp4",
+    "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/14_denoise.mp4",
+    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  }
+]

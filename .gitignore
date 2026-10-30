@@ -1,0 +1,13 @@
+# Original research materials stay local. Only curated copies under source/ are public.
+/ECCV26/
+/NeurIPS26/
+/paper.pdf
+/.work/
+/.DS_Store
+**/.DS_Store
+__pycache__/
+*.pyc
+/site-preview.png
+/site-preview-mobile.png
+/site-preview-*.png
+

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Early Failure Detection and Intervention in Video Diffusion Models. NeurIPS 2026. Project page, paper, and qualitative results.">
+  <meta property="og:title" content="Early Failure Detection and Intervention in Video Diffusion Models">
+  <meta property="og:description" content="Early saturation of video quality metrics enables failure detection and intervention during diffusion sampling. NeurIPS 2026.">
+  <meta property="og:type" content="website">
+  <title>Early Failure Detection and Intervention in Video Diffusion Models</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261030-13">
+  <script src="app.js?v=20261030-11" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main">
+  <header class="hero" id="top">
+    <h1>Early Failure Detection and Intervention<br class="desktop-break"> in Video Diffusion Models</h1>
+    <div class="authors">
+        <a href="https://byungki-k.github.io/" target="_blank" rel="noopener">Kwon Byung-Ki<sup>1</sup></a>
+        <a href="https://sohwi-lim.github.io/" target="_blank" rel="noopener">Sohwi Lim<sup>2</sup></a>
+        <a href="https://sites.google.com/view/namhyeonwoo/" target="_blank" rel="noopener">Nam Hyeon-Woo<sup>1</sup></a>
+        <a href="https://yebinmoon96.github.io/" target="_blank" rel="noopener">Moon Ye-Bin<sup>1</sup></a>
+        <a href="https://ami.kaist.ac.kr/members/tae-hyun-oh" target="_blank" rel="noopener">Tae-Hyun Oh<sup>2</sup></a>
+      </div>
+    <p class="affiliations"><span><sup>1</sup> Pohang University of Science and Technology (POSTECH)</span><span><sup>2</sup> Korea Advanced Institute of Science and Technology (KAIST)</span></p>
+    <p class="venue">NeurIPS 2026</p>
+    <div class="resource-links">
+        <a class="button button-primary" href="assets/documents/paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v5h4M8 11h5M8 14h5"/></svg>Paper <span aria-hidden="true">↗</span></a>
+        <span class="button button-unavailable" aria-label="Code coming soon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 5-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></svg>Code <small>Coming soon</small></span>
+      </div>
+  </header>
+
+  <section class="content observation" id="observation" aria-labelledby="observation-title">
+    <h2 id="observation-title">Video quality metrics saturate early</h2>
+    <figure class="observation-figure linked-observation">
+      <div class="preview-metric-grid">
+        <div class="sample-panel">
+          <div class="l2r-preview">
+            <video id="step-video" src="assets/videos/l2r-step-10.mp4" muted loop playsinline controls preload="metadata" poster="assets/frames/failure-10.webp" width="720" height="480" aria-label="Latent-to-RGB (L2R) preview at denoising step 10 for the prompt: A corgi is playing drum kit."><a href="assets/videos/l2r-step-10.mp4">Watch the L2R preview.</a></video>
+            <div class="preview-controls">
+              <p>Latent-to-RGB (L2R) preview</p>
+              <button class="play-button" id="play-preview" aria-label="Play L2R preview" hidden><span aria-hidden="true" id="preview-play-icon">▶</span><span id="preview-play-label">Play</span></button>
+            </div>
+          </div>
+          <p class="sample-prompt">“A corgi is playing drum kit.”</p>
+          <p class="sr-only" id="early-reading" aria-live="polite">By step 10, the preview depicts a human drummer rather than the requested corgi.</p>
+        </div>
+        <div class="metric-panel">
+            <svg class="metric-chart" viewBox="0 55 990 576" role="img" aria-labelledby="metric-chart-title metric-chart-desc">
+              <title id="metric-chart-title">Early saturation of video quality metrics</title>
+              <desc id="metric-chart-desc">Wan2.1-1.3B: normalized errors between intermediate and final video quality metrics fall sharply during early denoising. Curves are averages over 1,800 prompts, not scores for the example preview. The dashed guide follows the selected denoising step.</desc>
+              <image href="assets/images/quality-saturation-wan.webp" x="0" y="0" width="990" height="631" />
+              <g class="metric-model-label">
+                <rect x="650" y="76" width="270" height="44" rx="4" />
+                <text x="903" y="107">Wan2.1-1.3B</text>
+              </g>
+              <rect x="0" y="150" width="65" height="330" />
+              <g class="metric-axis-label" transform="translate(38 298) rotate(-90)">
+                <text x="0" y="0">Error vs. final video</text>
+              </g>
+              <g id="metric-step-marker" transform="translate(283.7755 0)">
+                <line x1="0" x2="0" y1="60" y2="535" />
+              </g>
+            </svg>
+          <div class="metric-legend" role="group" aria-label="Quality metric legend">
+            <ul class="metric-legend-row">
+              <li style="--metric-color:#ff0000"><span>Overall Consistency</span></li>
+              <li style="--metric-color:#1f77b4"><span>Aesthetic Quality</span></li>
+              <li style="--metric-color:#ff7f0e"><span>Background Consistency</span></li>
+            </ul>
+            <ul class="metric-legend-row">
+              <li style="--metric-color:#2ca02c"><span>Subject Consistency</span></li>
+              <li style="--metric-color:#bcbd22"><span>Imaging Quality</span></li>
+            </ul>
+          </div>
+          <p class="metric-note">1,800-prompt mean · normalized error</p>
+        </div>
+      </div>
+      <div class="step-control"><div class="slider-caption"><label for="step-slider">Denoising step</label><output id="step-output" for="step-slider">10 / 50</output></div><input type="range" id="step-slider" min="0" max="6" value="4" step="1" aria-valuetext="Step 10 of 50"><div class="step-ticks" role="group" aria-label="Select a denoising step"><button data-step="0" aria-pressed="false">1</button><button data-step="1" aria-pressed="false">3</button><button data-step="2" aria-pressed="false">5</button><button data-step="3" aria-pressed="false">7</button><button data-step="4" class="selected" aria-pressed="true">10</button><button data-step="5" aria-pressed="false">12</button><button data-step="6" aria-pressed="false">14</button></div></div>
+    </figure>
+  </section>
+
+  <section class="content section purpose-section" id="approach" aria-labelledby="approach-title">
+    <h2 id="approach-title">Detect early, intervene selectively</h2>
+    <p class="research-copy">Waiting for a full video that misses the user's intent wastes both compute and time. We inspect early previews to catch likely failures, diagnose the mismatch, and intervene selectively. A lightweight single-frame probe guides semantic injection; visual feedback refines the prompt when needed. The aim is to reach a satisfactory video sooner, with less wasted generation.</p>
+    <figure class="paper-figure teaser-figure">
+      <a href="assets/images/teaser-paper.webp" target="_blank" rel="noopener"><img src="assets/images/teaser-paper.webp" alt="Paper Figure 1: real-time inspection detects a failing bird generation from an intermediate preview, then diagnostic intervention corrects it. On CogVideoX-5B, ours improves the VBench final score from 0.778 to 0.800 with 16.55% extra time, compared with 0.793 and 43.73% for regeneration." width="1995" height="581" loading="lazy"></a>
+    </figure>
+  </section>
+
+  <section class="content section" id="results" aria-labelledby="results-title">
+    <h2 id="results-title">VBench results</h2>
+    <div class="table-scroll" role="region" aria-label="VBench results by method and model" tabindex="0">
+      <table class="results-table vbench-table" aria-describedby="vbench-note">
+        <caption class="sr-only">Original-prompt VBench scores and additional generation time for four methods on two video diffusion models.</caption>
+        <colgroup><col></colgroup>
+        <colgroup span="4"></colgroup>
+        <colgroup span="4"></colgroup>
+        <thead>
+          <tr><th scope="col" rowspan="2">Method</th><th scope="colgroup" colspan="4">CogVideoX-5B</th><th scope="colgroup" colspan="4">Wan2.1-1.3B</th></tr>
+          <tr><th scope="col">Final ↑</th><th scope="col">Quality ↑</th><th scope="col">Semantic ↑</th><th scope="col" class="time-overhead">Time<br>overhead ↓</th><th scope="col">Final ↑</th><th scope="col">Quality ↑</th><th scope="col">Semantic ↑</th><th scope="col" class="time-overhead">Time<br>overhead ↓</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Original model <span class="method-detail">(No intervention)</span></th><td>0.778</td><td>0.803</td><td>0.680</td><td class="time-overhead">0.00%</td><td>0.789</td><td>0.811</td><td>0.700</td><td class="time-overhead">0.00%</td></tr>
+          <tr><th scope="row">+ Regeneration</th><td>0.793</td><td>0.813</td><td>0.716</td><td class="time-overhead">43.73%</td><td><strong>0.815</strong></td><td><strong>0.823</strong></td><td><strong>0.783</strong></td><td class="time-overhead">51.25%</td></tr>
+          <tr class="method-ours"><th scope="row">+ Ours</th><td><strong>0.800</strong></td><td><strong>0.816</strong></td><td><strong>0.735</strong></td><td class="time-overhead"><strong>16.55%</strong></td><td>0.805</td><td>0.817</td><td>0.756</td><td class="time-overhead"><strong>20.30%</strong></td></tr>
+          <tr class="method-variant"><th scope="row">w/ Qwen3.8-27B (VLM)</th><td>0.791</td><td>0.812</td><td>0.706</td><td class="time-overhead"><strong>16.49%</strong></td><td>0.802</td><td>0.820</td><td>0.732</td><td class="time-overhead"><strong>20.08%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note" id="vbench-note">Bold scores: best VBench result. GPT-5-mini is the default VLM; we also evaluated Qwen3.8-27B as an alternative.</p>
+    <details class="results-detail">
+      <summary>VBench on detected failures</summary>
+      <p class="figure-meta">VBench + Panda70M · 872 CogVideoX / 811 Wan failures</p>
+      <a href="assets/images/vbench-detected-failures.webp" target="_blank" rel="noopener"><img src="assets/images/vbench-detected-failures.webp" alt="VBench metric distributions on predicted failures: intervention shifts Overall Consistency, Subject Consistency, Background Consistency, Temporal Flickering and Motion Smoothness toward higher scores on both models." loading="lazy"></a>
+    </details>
+  </section>
+
+  <section class="content section" id="qualitative" aria-labelledby="qualitative-title">
+    <h2 id="qualitative-title">Qualitative results</h2>
+    <figure class="showcase" aria-labelledby="example-prompt">
+        <div class="showcase-top"><div class="prompt"><p id="example-prompt">“A corgi is playing drum kit.”</p></div><span class="model-tag" id="example-model">Wan2.1-1.3B</span></div>
+        <div class="video-pair">
+          <div class="video-panel"><video id="video-before" muted loop playsinline preload="metadata" poster="assets/images/corgi-before.webp" aria-label="Original generation: a human plays drums instead of a corgi"><source src="assets/videos/corgi-before.mp4" type="video/mp4"></video><span class="video-label label-failure">Without intervention</span></div>
+          <div class="video-panel"><video id="video-after" muted loop playsinline preload="metadata" poster="assets/images/corgi-after.webp" aria-label="With our intervention: a corgi plays drums"><source src="assets/videos/corgi-after.mp4" type="video/mp4"></video><span class="video-label label-ours">With our intervention</span></div>
+        </div>
+        
+        <div class="showcase-bottom">
+          <div class="example-tabs" role="group" aria-label="Choose a comparison example">
+            <button class="example-tab active" data-example="corgi" aria-pressed="true"><img src="assets/images/corgi-after.webp" alt="" width="32" height="24">Corgi drummer</button>
+            <button class="example-tab" data-example="astronaut" aria-pressed="false"><img src="assets/images/astronaut-after.webp" alt="" width="32" height="24">Cyberpunk astronaut</button>
+            <button class="example-tab" data-example="panda" aria-pressed="false"><img src="assets/images/panda-after.webp" alt="" width="32" height="24">Panda in class</button>
+            <button class="example-tab" data-example="nebula" aria-pressed="false"><img src="assets/images/nebula-after.webp" alt="" width="32" height="24">Nebula corgi</button>
+          </div>
+          <button class="play-button" id="play-comparison" aria-label="Play comparison videos"><span aria-hidden="true" id="play-icon">▶</span><span id="play-label">Play</span></button>
+        </div>
+        <p class="sr-only" id="example-announcement" role="status" aria-live="polite"></p>
+      </figure>
+  </section>
+
+  <section class="content section" id="video" aria-labelledby="video-title">
+    <h2 id="video-title">More qualitative results</h2>
+    <video class="overview-video" controls playsinline preload="none" poster="assets/images/overview-poster.webp?v=20261030-2" aria-label="More qualitative results across varied prompts"><source src="assets/videos/overview-qualitative.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/videos/overview-qualitative.mp4">Download the qualitative results video.</a></video>
+  </section>
+
+  <section class="content section future-section" id="future" aria-labelledby="future-title">
+    <h2 id="future-title">Future work</h2>
+    <p class="research-copy">We aim to detect finer-grained failures earlier and develop more efficient, effective interventions. More expressive yet lightweight video evaluators could help identify subtle motion artifacts and compositional errors, reducing wasted generation compute for service providers and shortening the time to satisfactory videos for users.</p>
+  </section>
+
+  <section class="content citation-section" id="citation" aria-labelledby="citation-title">
+    <h2 id="citation-title">BibTeX</h2>
+    <div class="citation-heading"><a class="citation-source" href="https://arxiv.org/abs/2603.14320" target="_blank" rel="noopener">arXiv:2603.14320 ↗</a><button class="copy-button" id="copy-citation"><span>Copy</span></button></div>
+    <pre><code id="bibtex">@misc{kwon2026earlyfailure,
+  title         = {Early Failure Detection and Intervention in Video Diffusion Models},
+  author        = {Kwon, Byung-Ki and Lim, Sohwi and Nam, Hyeon-Woo
+                   and Moon, Ye-Bin and Oh, Tae-Hyun},
+  year          = {2026},
+  eprint        = {2603.14320},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2603.14320}
+}</code></pre>
+    <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+  </section>
+</main>
+<footer><p>Page design inspired by <a href="https://byungki-k.github.io/JointDiT/" target="_blank" rel="noopener">JointDiT</a> and <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies</a>.</p></footer>
+</body>
+</html>
