@@ -4,6 +4,7 @@
 const examples = {
   corgi: { prompt: "A corgi is playing drum kit.", model: "Wan2.1-1.3B", before: "Original generation: a human plays drums instead of a corgi", after: "With our intervention: a corgi plays drums" },
   astronaut: { prompt: "An astronaut flying in space, in cyberpunk style", model: "CogVideoX-5B", before: "Original generation: an astronaut in space", after: "With our intervention: a flying astronaut with neon cyberpunk details" },
+  ironman: { prompt: "Iron Man flying in the sky", model: "CogVideoX-5B", before: "Original generation: a distant red armored figure in the sky", after: "With our intervention: Iron Man flying against a blue sky, with clearly visible armor details" },
   panda: { prompt: "A confused panda in calculus class", model: "CogVideoX-5B", before: "Original generation: a child holding a tablet", after: "With our intervention: an illustrated panda at a desk in calculus class" },
   nebula: { prompt: "A corgi's head depicted as an explosion of a nebula", model: "Wan2.1-1.3B", before: "Original generation: an animal head with limited nebula detail", after: "With our intervention: a corgi head surrounded by a colorful nebula" }
 };

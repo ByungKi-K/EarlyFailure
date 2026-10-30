@@ -238,5 +238,25 @@
     "public_file": "source/assets/videos/l2r-step-14.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/14_denoise.mp4",
     "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/videos/ironman-before.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0745_samples/initial.mp4",
+    "processing": "H.264 stream copied without re-encoding; original 720x480 frames, 8 fps, and full 6.125-second duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/images/ironman-before.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0745_samples/initial.mp4",
+    "processing": "Poster frame at 1 second; WebP quality 85; original dimensions preserved."
+  },
+  {
+    "public_file": "source/assets/videos/ironman-after.mp4",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0745_samples/output.mp4",
+    "processing": "H.264 stream copied without re-encoding; original 720x480 frames, 8 fps, and full 6.125-second duration preserved; no audio; faststart."
+  },
+  {
+    "public_file": "source/assets/images/ironman-after.webp",
+    "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0745_samples/output.mp4",
+    "processing": "Poster frame at 1 second; WebP quality 85; original dimensions preserved."
   }
 ]

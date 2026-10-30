@@ -44,7 +44,7 @@ for link in page.links:
 js = (PUBLIC / "app.js").read_text()
 for selector in re.findall(r'querySelector\("#([\w-]+)"\)', js):
     assert selector in page.ids, f"JavaScript target does not exist: {selector}"
-for slug in ("corgi", "astronaut", "panda", "nebula"):
+for slug in ("corgi", "astronaut", "ironman", "panda", "nebula"):
     for side in ("before", "after"):
         for folder, extension in (("videos", "mp4"), ("images", "webp")):
             assert (PUBLIC / f"assets/{folder}/{slug}-{side}.{extension}").is_file()
