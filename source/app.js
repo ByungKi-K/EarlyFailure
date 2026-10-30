@@ -155,6 +155,8 @@ document.addEventListener("visibilitychange", updatePreviewPlayback);
 
 const steps = [1, 3, 5, 7, 10, 12, 14];
 const slider = document.querySelector("#step-slider");
+const previousStep = document.querySelector("#step-previous");
+const nextStep = document.querySelector("#step-next");
 let stepLoadTimer;
 
 function loadStepVideo(index) {
@@ -175,6 +177,9 @@ function setStep(index, deferVideo = false) {
   const step = steps[index];
   slider.value = String(index);
   slider.setAttribute("aria-valuetext", `Step ${step} of 50`);
+  slider.style.setProperty("--step-progress", `${index / (steps.length - 1) * 100}%`);
+  previousStep.disabled = index === 0;
+  nextStep.disabled = index === steps.length - 1;
   document.querySelector("#step-output").textContent = `${step} / 50`;
   // Fig. 7's Wan panel spans steps 1–50, at x = 135–945 in the 990 px crop.
   // The guide indicates sampling time only; no sample-specific score is inferred.
@@ -199,6 +204,8 @@ function setStep(index, deferVideo = false) {
 }
 slider.addEventListener("input", event => setStep(Number(event.target.value), true));
 slider.addEventListener("change", event => setStep(Number(event.target.value)));
+previousStep.addEventListener("click", () => setStep(Math.max(0, Number(slider.value) - 1)));
+nextStep.addEventListener("click", () => setStep(Math.min(steps.length - 1, Number(slider.value) + 1)));
 document.querySelectorAll("[data-step]").forEach(button => button.addEventListener("click", () => setStep(Number(button.dataset.step))));
 setStep(4);
 

@@ -10,8 +10,8 @@
   <meta property="og:type" content="website">
   <title>Early Failure Detection and Intervention in Video Diffusion Models</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261030-13">
-  <script src="app.js?v=20261030-15" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261030-14">
+  <script src="app.js?v=20261030-16" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -79,7 +79,18 @@
           <p class="metric-note">1,800-prompt mean · normalized error</p>
         </div>
       </div>
-      <div class="step-control"><div class="slider-caption"><label for="step-slider">Denoising step</label><output id="step-output" for="step-slider">10 / 50</output></div><input type="range" id="step-slider" min="0" max="6" value="4" step="1" aria-valuetext="Step 10 of 50"><div class="step-ticks" role="group" aria-label="Select a denoising step"><button data-step="0" aria-pressed="false">1</button><button data-step="1" aria-pressed="false">3</button><button data-step="2" aria-pressed="false">5</button><button data-step="3" aria-pressed="false">7</button><button data-step="4" class="selected" aria-pressed="true">10</button><button data-step="5" aria-pressed="false">12</button><button data-step="6" aria-pressed="false">14</button></div></div>
+      <div class="step-control">
+        <div class="slider-caption"><label for="step-slider">Denoising step</label><output id="step-output" for="step-slider">10 / 50</output></div>
+        <div class="step-navigation">
+          <button class="step-arrow" id="step-previous" aria-label="Previous denoising step"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg></button>
+          <div class="step-track">
+            <input type="range" id="step-slider" min="0" max="6" value="4" step="1" aria-valuetext="Step 10 of 50" aria-describedby="step-hint" style="--step-progress:66.6667%">
+            <div class="step-ticks" role="group" aria-label="Select a denoising step"><button data-step="0" aria-pressed="false">1</button><button data-step="1" aria-pressed="false">3</button><button data-step="2" aria-pressed="false">5</button><button data-step="3" aria-pressed="false">7</button><button data-step="4" class="selected" aria-pressed="true">10</button><button data-step="5" aria-pressed="false">12</button><button data-step="6" aria-pressed="false">14</button></div>
+          </div>
+          <button class="step-arrow" id="step-next" aria-label="Next denoising step"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg></button>
+        </div>
+        <p class="step-hint" id="step-hint">Drag left or right to explore</p>
+      </div>
     </figure>
   </section>
 
