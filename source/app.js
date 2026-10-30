@@ -17,6 +17,7 @@ const playButton = document.querySelector("#play-comparison");
 let wantsPlayback = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let inView = false;
 let playbackVersion = 0;
+let activeExample = "corgi";
 
 function showPlayback(playing) {
   document.querySelector("#play-label").textContent = playing ? "Pause" : "Play";
@@ -50,13 +51,16 @@ playButton.addEventListener("click", () => {
 document.querySelectorAll("[data-example]").forEach(button => {
   button.addEventListener("click", () => {
     const id = button.dataset.example;
+    // Keep the decoded frames and buffer when the current example is selected again.
+    if (id === activeExample) return;
+    activeExample = id;
     const example = examples[id];
     playbackVersion++;
     comparisonVideos.forEach((video, index) => {
       video.pause();
       const side = index === 0 ? "before" : "after";
       video.poster = `assets/images/${id}-${side}.webp`;
-      video.querySelector("source").src = `assets/videos/${id}-${side}.mp4`;
+      video.querySelector("source").src = `assets/videos/${id}-${side}.mp4?v=20261030-optimized`;
       video.setAttribute("aria-label", example[side]);
       video.load();
     });
@@ -151,11 +155,11 @@ document.addEventListener("visibilitychange", updatePreviewPlayback);
 
 const steps = [1, 3, 5, 7, 10, 12, 14];
 const slider = document.querySelector("#step-slider");
-function setStep(index) {
+let stepLoadTimer;
+
+function loadStepVideo(index) {
   const step = steps[index];
-  slider.value = String(index);
-  slider.setAttribute("aria-valuetext", `Step ${step} of 50`);
-  const source = `assets/videos/l2r-step-${String(step).padStart(2, "0")}.mp4`;
+  const source = `assets/videos/l2r-step-${String(step).padStart(2, "0")}.mp4?v=20261030-optimized`;
   if (previewVideo.getAttribute("src") !== source) {
     previewPlaybackVersion++;
     previewVideo.pause();
@@ -164,6 +168,13 @@ function setStep(index) {
     previewVideo.load();
   }
   previewVideo.setAttribute("aria-label", `Latent-to-RGB (L2R) preview at denoising step ${step} for the prompt: A corgi is playing drum kit.`);
+  updatePreviewPlayback();
+}
+
+function setStep(index, deferVideo = false) {
+  const step = steps[index];
+  slider.value = String(index);
+  slider.setAttribute("aria-valuetext", `Step ${step} of 50`);
   document.querySelector("#step-output").textContent = `${step} / 50`;
   // Fig. 7's Wan panel spans steps 1–50, at x = 135–945 in the 990 px crop.
   // The guide indicates sampling time only; no sample-specific score is inferred.
@@ -178,9 +189,16 @@ function setStep(index) {
     button.classList.toggle("selected", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
-  updatePreviewPlayback();
+  window.clearTimeout(stepLoadTimer);
+  if (deferVideo) {
+    // Skip transient positions while dragging; release commits immediately.
+    stepLoadTimer = window.setTimeout(() => loadStepVideo(index), 180);
+  } else {
+    loadStepVideo(index);
+  }
 }
-slider.addEventListener("input", event => setStep(Number(event.target.value)));
+slider.addEventListener("input", event => setStep(Number(event.target.value), true));
+slider.addEventListener("change", event => setStep(Number(event.target.value)));
 document.querySelectorAll("[data-step]").forEach(button => button.addEventListener("click", () => setStep(Number(button.dataset.step))));
 setStep(4);
 

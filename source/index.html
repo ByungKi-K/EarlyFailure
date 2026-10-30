@@ -11,7 +11,7 @@
   <title>Early Failure Detection and Intervention in Video Diffusion Models</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20261030-13">
-  <script src="app.js?v=20261030-14" defer></script>
+  <script src="app.js?v=20261030-15" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -39,7 +39,7 @@
       <div class="preview-metric-grid">
         <div class="sample-panel">
           <div class="l2r-preview">
-            <video id="step-video" src="assets/videos/l2r-step-10.mp4" muted loop playsinline controls preload="metadata" poster="assets/frames/failure-10.webp" width="720" height="480" aria-label="Latent-to-RGB (L2R) preview at denoising step 10 for the prompt: A corgi is playing drum kit."><a href="assets/videos/l2r-step-10.mp4">Watch the L2R preview.</a></video>
+            <video id="step-video" src="assets/videos/l2r-step-10.mp4?v=20261030-optimized" muted loop playsinline controls preload="none" poster="assets/frames/failure-10.webp" width="720" height="480" aria-label="Latent-to-RGB (L2R) preview at denoising step 10 for the prompt: A corgi is playing drum kit."><a href="assets/videos/l2r-step-10.mp4?v=20261030-optimized">Watch the L2R preview.</a></video>
             <div class="preview-controls">
               <p>Latent-to-RGB (L2R) preview</p>
               <button class="play-button" id="play-preview" aria-label="Play L2R preview" hidden><span aria-hidden="true" id="preview-play-icon">▶</span><span id="preview-play-label">Play</span></button>
@@ -124,17 +124,17 @@
     <figure class="showcase" aria-labelledby="example-prompt">
         <div class="showcase-top"><div class="prompt"><p id="example-prompt">“A corgi is playing drum kit.”</p></div><span class="model-tag" id="example-model">Wan2.1-1.3B</span></div>
         <div class="video-pair">
-          <div class="video-panel"><video id="video-before" muted loop playsinline preload="metadata" poster="assets/images/corgi-before.webp" aria-label="Original generation: a human plays drums instead of a corgi"><source src="assets/videos/corgi-before.mp4" type="video/mp4"></video><span class="video-label label-failure">Without intervention</span></div>
-          <div class="video-panel"><video id="video-after" muted loop playsinline preload="metadata" poster="assets/images/corgi-after.webp" aria-label="With our intervention: a corgi plays drums"><source src="assets/videos/corgi-after.mp4" type="video/mp4"></video><span class="video-label label-ours">With our intervention</span></div>
+          <div class="video-panel"><video id="video-before" muted loop playsinline preload="none" poster="assets/images/corgi-before.webp" aria-label="Original generation: a human plays drums instead of a corgi"><source src="assets/videos/corgi-before.mp4?v=20261030-optimized" type="video/mp4"></video><span class="video-label label-failure">Without intervention</span></div>
+          <div class="video-panel"><video id="video-after" muted loop playsinline preload="none" poster="assets/images/corgi-after.webp" aria-label="With our intervention: a corgi plays drums"><source src="assets/videos/corgi-after.mp4?v=20261030-optimized" type="video/mp4"></video><span class="video-label label-ours">With our intervention</span></div>
         </div>
         
         <div class="showcase-bottom">
           <div class="example-tabs" role="group" aria-label="Choose a comparison example">
-            <button class="example-tab active" data-example="corgi" aria-pressed="true"><img src="assets/images/corgi-after.webp" alt="" width="32" height="24">Corgi drummer</button>
-            <button class="example-tab" data-example="astronaut" aria-pressed="false"><img src="assets/images/astronaut-after.webp" alt="" width="32" height="24">Cyberpunk astronaut</button>
-            <button class="example-tab" data-example="ironman" aria-pressed="false"><img src="assets/images/ironman-after.webp" alt="" width="32" height="24">Iron Man</button>
-            <button class="example-tab" data-example="panda" aria-pressed="false"><img src="assets/images/panda-after.webp" alt="" width="32" height="24">Panda in class</button>
-            <button class="example-tab" data-example="nebula" aria-pressed="false"><img src="assets/images/nebula-after.webp" alt="" width="32" height="24">Nebula corgi</button>
+            <button class="example-tab active" data-example="corgi" aria-pressed="true"><img src="assets/images/corgi-after.webp" alt="" width="32" height="24" loading="lazy">Corgi drummer</button>
+            <button class="example-tab" data-example="astronaut" aria-pressed="false"><img src="assets/images/astronaut-after.webp" alt="" width="32" height="24" loading="lazy">Cyberpunk astronaut</button>
+            <button class="example-tab" data-example="ironman" aria-pressed="false"><img src="assets/images/ironman-after.webp" alt="" width="32" height="24" loading="lazy">Iron Man</button>
+            <button class="example-tab" data-example="panda" aria-pressed="false"><img src="assets/images/panda-after.webp" alt="" width="32" height="24" loading="lazy">Panda in class</button>
+            <button class="example-tab" data-example="nebula" aria-pressed="false"><img src="assets/images/nebula-after.webp" alt="" width="32" height="24" loading="lazy">Nebula corgi</button>
           </div>
           <button class="play-button" id="play-comparison" aria-label="Play comparison videos"><span aria-hidden="true" id="play-icon">▶</span><span id="play-label">Play</span></button>
         </div>
@@ -144,7 +144,7 @@
 
   <section class="content section" id="video" aria-labelledby="video-title">
     <h2 id="video-title">More qualitative results</h2>
-    <video class="overview-video" controls playsinline preload="none" poster="assets/images/overview-poster.webp?v=20261030-2" aria-label="More qualitative results across varied prompts"><source src="assets/videos/overview-qualitative.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/videos/overview-qualitative.mp4">Download the qualitative results video.</a></video>
+    <video class="overview-video" controls playsinline preload="none" poster="assets/images/overview-poster.webp?v=20261030-2" aria-label="More qualitative results across varied prompts"><source src="assets/videos/overview-qualitative.mp4?v=20261030-optimized" type="video/mp4">Your browser does not support embedded video. <a href="assets/videos/overview-qualitative.mp4?v=20261030-optimized">Download the qualitative results video.</a></video>
   </section>
 
   <section class="content section future-section" id="future" aria-labelledby="future-title">

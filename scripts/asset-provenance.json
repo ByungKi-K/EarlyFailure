@@ -2,7 +2,7 @@
   {
     "public_file": "source/assets/videos/corgi-before.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0729_samples/initial.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/corgi-before.webp",
@@ -12,7 +12,7 @@
   {
     "public_file": "source/assets/videos/corgi-after.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0729_samples/output.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/corgi-after.webp",
@@ -22,7 +22,7 @@
   {
     "public_file": "source/assets/videos/astronaut-before.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0570_samples/initial.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/astronaut-before.webp",
@@ -32,7 +32,7 @@
   {
     "public_file": "source/assets/videos/astronaut-after.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0570_samples/output.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/astronaut-after.webp",
@@ -42,7 +42,7 @@
   {
     "public_file": "source/assets/videos/panda-before.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0754_samples/initial.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/panda-before.webp",
@@ -52,7 +52,7 @@
   {
     "public_file": "source/assets/videos/panda-after.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0754_samples/output.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/panda-after.webp",
@@ -62,7 +62,7 @@
   {
     "public_file": "source/assets/videos/nebula-before.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0733_samples/initial.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/nebula-before.webp",
@@ -72,7 +72,7 @@
   {
     "public_file": "source/assets/videos/nebula-after.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/wan/vbench/failure/0733_samples/output.mp4",
-    "processing": "H.264, 720 px wide, CRF 23, no audio, faststart; full duration preserved"
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/nebula-after.webp",
@@ -202,47 +202,47 @@
   {
     "public_file": "source/assets/videos/overview-qualitative.mp4",
     "original_file": "NeurIPS26/supple.mp4",
-    "processing": "Qualitative section from 77 seconds to the end; 1080p H.264, CRF 24, no audio, faststart. Generated directly from the research original; full-length overview.mp4 preserved."
+    "processing": "Qualitative section from 77 seconds to the end, encoded directly from NeurIPS26/supple.mp4: 1920x1080 H.264 (libx264, slow, CRF 26), no audio, faststart. Same frame rate, 6,740 frames, and 107.839222-second duration as the previous published cut; full-length overview.mp4 preserved."
   },
   {
     "public_file": "source/assets/videos/l2r-step-01.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/01_denoise.mp4",
-    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the recorded research original: H.264 (libx264, slow, CRF 24), 720x480, 4 fps, all 13 frames and 3.25-second duration preserved; no audio; faststart. No interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/videos/l2r-step-03.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/03_denoise.mp4",
-    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the recorded research original: H.264 (libx264, slow, CRF 24), 720x480, 4 fps, all 13 frames and 3.25-second duration preserved; no audio; faststart. No interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/videos/l2r-step-05.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/05_denoise.mp4",
-    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the recorded research original: H.264 (libx264, slow, CRF 24), 720x480, 4 fps, all 13 frames and 3.25-second duration preserved; no audio; faststart. No interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/videos/l2r-step-07.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/07_denoise.mp4",
-    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the recorded research original: H.264 (libx264, slow, CRF 24), 720x480, 4 fps, all 13 frames and 3.25-second duration preserved; no audio; faststart. No interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/videos/l2r-step-10.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/10_denoise.mp4",
-    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the recorded research original: H.264 (libx264, slow, CRF 24), 720x480, 4 fps, all 13 frames and 3.25-second duration preserved; no audio; faststart. No interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/videos/l2r-step-12.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/12_denoise.mp4",
-    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the recorded research original: H.264 (libx264, slow, CRF 24), 720x480, 4 fps, all 13 frames and 3.25-second duration preserved; no audio; faststart. No interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/videos/l2r-step-14.mp4",
     "original_file": "ECCV26/eccv_results/trial2/wan/0729_samples/initial_pass/14_denoise.mp4",
-    "processing": "Recorded intermediate L2R preview at this denoising step. H.264 stream copied without re-encoding; original frames, frame rate, and full duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the recorded research original: H.264 (libx264, slow, CRF 24), 720x480, 4 fps, all 13 frames and 3.25-second duration preserved; no audio; faststart. No interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/videos/ironman-before.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0745_samples/initial.mp4",
-    "processing": "H.264 stream copied without re-encoding; original 720x480 frames, 8 fps, and full 6.125-second duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/ironman-before.webp",
@@ -252,7 +252,7 @@
   {
     "public_file": "source/assets/videos/ironman-after.mp4",
     "original_file": "ECCV26/eccv_results/original_prompt/cogvideox/vbench/failure/0745_samples/output.mp4",
-    "processing": "H.264 stream copied without re-encoding; original 720x480 frames, 8 fps, and full 6.125-second duration preserved; no audio; faststart."
+    "processing": "Re-encoded directly from the research original: H.264 (libx264, slow, CRF 26), 720x480, 8 fps, all 49 frames and 6.125-second duration preserved; no audio; faststart. Identical compression settings for before/after pairs; no interpolation or semantic editing."
   },
   {
     "public_file": "source/assets/images/ironman-after.webp",
